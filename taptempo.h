@@ -9,13 +9,16 @@ namespace taptempo {
 class TapTempo {
 public:
   void init(int sample_rate, float averaging_coeff = 0.9f);
+  // Call to register user input event
   void tap();
+  // Call once every loop. Should be called sample_rate times per second.
   void tick();
   float get_tempo_hz();
   float get_tempo_samples();
 
 private:
-  int sample_rate; // How many times a second tap source will be checked
+  // How many times a second tap source will be checked
+  int sample_rate;
   int ticks_since_last_tap;
   float average_ticks;
   float averaging_coeff;
