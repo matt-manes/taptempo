@@ -22,5 +22,5 @@ void TapTempo::update_average() {
 
 float TapTempo::get_tempo_hz() { return (float)sample_rate / average_ticks; }
 
-float TapTempo::get_tempo_samples() { return int(average_ticks); }
+int TapTempo::get_tempo_samples() { return int(average_ticks); }
 } // namespace taptempo

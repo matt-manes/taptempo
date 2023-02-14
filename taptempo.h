@@ -14,7 +14,7 @@ public:
   // Call once every loop. Should be called sample_rate times per second.
   void tick();
   float get_tempo_hz();
-  float get_tempo_samples();
+  int get_tempo_samples();
 
 private:
   // How many times a second tap source will be checked
